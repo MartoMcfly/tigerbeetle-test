@@ -1,0 +1,28 @@
+{
+  "name": "blockchain-omnibus-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Blockchain Omnibus Demo with TigerBeetle distributed ledger",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "setup:tigerbeetle": "node scripts/setup-tigerbeetle.js"
+  },
+  "devDependencies": {
+    "turbo": "^1.10.16",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
+
